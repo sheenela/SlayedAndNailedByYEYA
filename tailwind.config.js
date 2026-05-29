@@ -1,0 +1,66 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        lavender: {
+          50: '#faf8ff',
+          100: '#f4edff',
+          200: '#e9d9ff',
+          300: '#d4b8ff',
+          400: '#ba8dff',
+          500: '#a366ff',
+          600: '#8b44f7',
+          700: '#7c3de2',
+          800: '#6a34be',
+          900: '#5a2e9c',
+        },
+        blush: {
+          50: '#fff8fa',
+          100: '#ffeef4',
+          200: '#ffdde8',
+          300: '#ffc3d3',
+          400: '#ff9ab3',
+          500: '#ff6b8b',
+          600: '#ed4a70',
+          700: '#c93a5b',
+          800: '#a83450',
+          900: '#8e3048',
+        },
+        nude: {
+          50: '#fffdfb',
+          100: '#fcf7f3',
+          200: '#f7ede5',
+          300: '#f0ddd0',
+          400: '#e5c4ad',
+          500: '#d7a886',
+          600: '#c48b62',
+          700: '#a5714f',
+          800: '#875c43',
+          900: '#704c3a',
+        },
+        gold: {
+          50: '#fffdf7',
+          100: '#fff8e6',
+          200: '#ffefc7',
+          300: '#ffe39c',
+          400: '#ffd26d',
+          500: '#f7ba35',
+          600: '#e9a019',
+          700: '#c37d0b',
+          800: '#9f660c',
+          900: '#835411',
+        },
+      },
+      fontFamily: {
+        playfair: ['Playfair Display', 'serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
