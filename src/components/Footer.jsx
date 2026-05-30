@@ -101,11 +101,11 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:sheenela.samuel@gmail.com"
+                  href="mailto:info@slayedandnailed.com"
                   className="flex items-center space-x-2 text-gray-600 hover:text-lavender-600 transition-colors text-sm"
                 >
                   <Mail size={16} className="text-lavender-500" />
-                  <span>sheenela.samuel@gmail.com</span>
+                  <span>info@slayedandnailed.com</span>
                 </a>
               </li>
               <li className="flex items-start space-x-2 text-gray-600 text-sm">

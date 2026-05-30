@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
 
 const contactInfo = [
   { icon: Phone, title: 'Phone', value: '+1 (758) 727-0420', link: 'tel:+17587270420' },
-  { icon: Mail, title: 'Email', value: 'sheenela.samuel@gmail.com', link: 'mailto:sheenela.samuel@gmail.com' },
+  { icon: Mail, title: 'Email', value: 'info@slayedandnailed.com', link: 'mailto:info@slayedandnailed.com' },
   { icon: MapPin, title: 'Location', value: 'Saint Lucia, Caribbean', link: null },
   { icon: Clock, title: 'Hours', value: 'Mon - Sat: 9AM - 6PM', link: null },
 ]
