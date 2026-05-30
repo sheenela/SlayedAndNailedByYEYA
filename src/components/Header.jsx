@@ -39,7 +39,7 @@ function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/image.png" alt="Slayed and Nailed by YeYa" className="h-14 object-contain" />
+            <img src="/image.png" alt="Slayed and Nailed by YeYa" className="h-16 object-contain" />
             <div className="hidden sm:block">
               <h1 className="text-lg md:text-xl font-playfair font-bold leading-tight text-gray-800">
                 Slayed & Nailed
