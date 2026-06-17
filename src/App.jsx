@@ -12,6 +12,7 @@ import Booking from './pages/Booking'
 import WhatsAppButton from './components/WhatsAppButton'
 import StickyBookingCTA from './components/StickyBookingCTA'
 import CatWidget from './components/CatWidget'
+import CatWalker from './components/CatWalker'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <WhatsAppButton />
       <StickyBookingCTA />
       <CatWidget />
+      <CatWalker />
     </Router>
   )
 }
