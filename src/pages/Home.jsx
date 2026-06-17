@@ -44,8 +44,9 @@ function Home() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.pexels.com/photos/3997371/pexels-photo-3997371.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Luxury nails" className="w-full h-full object-cover" loading="eager" />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#8B5CF6]/80 via-[#8B5CF6]/70 to-[#EC4899]/70"></div>
+          <img src="/ChatGPT_Image_Jun_16,_2026,_09_48_20_PM.png" alt="Nail salon" className="w-full h-full object-cover object-center" loading="eager" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#8B5CF6]/60 via-transparent to-[#EC4899]/50"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
