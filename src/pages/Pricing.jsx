@@ -73,19 +73,19 @@ const popularCombo = [
 function Pricing() {
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-gold-50 to-white">
+      <section className="relative py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-1.5 bg-gold-100 text-gold-700 rounded-full text-sm font-medium mb-4">Transparent Pricing</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-800 mb-6">Service Pricing</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Premium nail services at fair prices. No hidden fees.</p>
+          <span className="inline-block px-4 py-1.5 bg-white/90 backdrop-blur-sm text-[#8B5CF6] rounded-full text-sm font-medium mb-4">Transparent Pricing</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">Service Pricing</h1>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">Premium nail services at fair prices. No hidden fees.</p>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800 mb-4">Popular Packages</h2>
-            <p className="text-gray-600">Save with our curated treatment packages</p>
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">Popular Packages</h2>
+            <p className="text-white/80">Save with our curated treatment packages</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
@@ -93,12 +93,12 @@ function Pricing() {
               <div
                 key={index}
                 className={`relative rounded-2xl p-6 md:p-8 ${
-                  pkg.popular ? 'bg-gradient-to-br from-lavender-500 to-blush-500 text-white shadow-xl scale-105' : 'bg-gray-50 shadow-md hover:shadow-lg'
+                  pkg.popular ? 'bg-gradient-to-br from-[#8B5CF6] to-[#EC4899] text-white shadow-xl scale-105' : 'bg-white/90 backdrop-blur-sm shadow-md hover:shadow-lg'
                 } transition-all duration-300`}
               >
                 {pkg.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="inline-flex items-center space-x-1 px-4 py-1.5 bg-gold-400 text-white rounded-full text-sm font-medium">
+                    <span className="inline-flex items-center space-x-1 px-4 py-1.5 bg-[#FCD34D] text-gray-900 rounded-full text-sm font-medium">
                       <Sparkles className="w-4 h-4" />
                       <span>Most Popular</span>
                     </span>
@@ -107,19 +107,19 @@ function Pricing() {
                 <div className="text-center mb-6">
                   <h3 className={`text-2xl font-playfair font-bold mb-2 ${pkg.popular ? 'text-white' : 'text-gray-800'}`}>{pkg.name}</h3>
                   <div className="flex items-baseline justify-center space-x-2">
-                    <span className={`text-4xl font-bold ${pkg.popular ? 'text-white' : 'text-lavender-600'}`}>{pkg.price}</span>
+                    <span className={`text-4xl font-bold ${pkg.popular ? 'text-white' : 'text-[#8B5CF6]'}`}>{pkg.price}</span>
                     <span className={`text-lg line-through ${pkg.popular ? 'text-white/60' : 'text-gray-400'}`}>{pkg.value}</span>
                   </div>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {pkg.services.map((service, idx) => (
                     <li key={idx} className="flex items-center space-x-3">
-                      <Check className={`w-5 h-5 flex-shrink-0 ${pkg.popular ? 'text-gold-300' : 'text-lavender-500'}`} />
+                      <Check className={`w-5 h-5 flex-shrink-0 ${pkg.popular ? 'text-[#FCD34D]' : 'text-[#8B5CF6]'}`} />
                       <span className={pkg.popular ? 'text-white/90' : 'text-gray-700'}>{service}</span>
                     </li>
                   ))}
                 </ul>
-                <Link to="/booking" className={`block w-full py-3 rounded-full font-semibold text-center transition-all duration-200 ${pkg.popular ? 'bg-white text-lavender-600 hover:shadow-lg' : 'bg-gradient-to-r from-lavender-500 to-blush-500 text-white hover:shadow-lg hover:scale-105'}`}>
+                <Link to="/booking" className={`block w-full py-3 rounded-full font-semibold text-center transition-all duration-200 ${pkg.popular ? 'bg-white text-[#8B5CF6] hover:shadow-lg' : 'bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white hover:shadow-lg hover:scale-105'}`}>
                   Book Package
                 </Link>
               </div>
@@ -128,16 +128,16 @@ function Pricing() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-lavender-50">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800 mb-4">Full Service Menu</h2>
-            <p className="text-gray-600">All services include expert consultation and premium products</p>
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-4">Full Service Menu</h2>
+            <p className="text-white/80">All services include expert consultation and premium products</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {pricingCategories.map((category, catIndex) => (
-              <div key={catIndex} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
+              <div key={catIndex} className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-playfair font-semibold text-gray-800 mb-6 pb-3 border-b border-gray-100">{category.title}</h3>
                 <ul className="space-y-4">
                   {category.items.map((item, idx) => (
@@ -146,7 +146,7 @@ function Pricing() {
                         <p className="font-medium text-gray-800">{item.name}</p>
                         <p className="text-sm text-gray-500">{item.description}</p>
                       </div>
-                      <span className="font-semibold text-lavender-600">{item.price}</span>
+                      <span className="font-semibold text-[#8B5CF6]">{item.price}</span>
                     </li>
                   ))}
                 </ul>
@@ -156,13 +156,15 @@ function Pricing() {
         </div>
       </section>
 
-      <section className="py-12 bg-lavender-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-xl font-playfair font-semibold text-gray-800 mb-3">Custom Pricing Available</h3>
-          <p className="text-gray-600 mb-6">Have a specific design in mind? Contact us for personalized pricing.</p>
-          <Link to="/contact" className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-lavender-600 rounded-full font-medium shadow-md hover:shadow-lg hover:bg-lavender-50 transition-all duration-200 border border-lavender-200">
-            <span>Get Custom Quote</span>
-          </Link>
+      <section className="py-12">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg text-center">
+            <h3 className="text-xl font-playfair font-semibold text-gray-800 mb-3">Custom Pricing Available</h3>
+            <p className="text-gray-600 mb-6">Have a specific design in mind? Contact us for personalized pricing.</p>
+            <Link to="/contact" className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-[#8B5CF6] rounded-full font-medium shadow-md hover:shadow-lg hover:bg-[#F3E8FF] transition-all duration-200 border border-[#8B5CF6]/20">
+              <span>Get Custom Quote</span>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

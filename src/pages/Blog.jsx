@@ -16,72 +16,74 @@ function Blog() {
 
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-blush-50 to-white">
+      <section className="relative py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-1.5 bg-blush-100 text-blush-700 rounded-full text-sm font-medium mb-4">Our Blog</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-800 mb-6">Nail Tips & Inspiration</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Expert advice and nail care tips to keep your nails looking fabulous.</p>
+          <span className="inline-block px-4 py-1.5 bg-white/90 backdrop-blur-sm text-[#8B5CF6] rounded-full text-sm font-medium mb-4">Our Blog</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">Nail Tips & Inspiration</h1>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">Expert advice and nail care tips to keep your nails looking fabulous.</p>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <article className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={featuredPost.image} alt={featuredPost.title} className="w-full aspect-video object-cover" loading="lazy" />
-            </div>
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <span className="inline-flex items-center space-x-1.5 px-3 py-1 bg-lavender-100 text-lavender-700 rounded-full text-sm">
-                  <Tag className="w-3 h-3" />
-                  <span>{featuredPost.category}</span>
-                </span>
-                <span className="text-sm text-gray-500">{featuredPost.date}</span>
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg">
+            <article className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img src={featuredPost.image} alt={featuredPost.title} className="w-full aspect-video object-cover" loading="lazy" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-playfair font-bold text-gray-800 mb-4">{featuredPost.title}</h2>
-              <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lavender-400 to-blush-400 flex items-center justify-center">
-                    <User className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-800">{featuredPost.author}</p>
-                    <p className="text-sm text-gray-500">{featuredPost.readTime}</p>
-                  </div>
+              <div>
+                <div className="flex items-center space-x-3 mb-4">
+                  <span className="inline-flex items-center space-x-1.5 px-3 py-1 bg-[#F3E8FF] text-[#8B5CF6] rounded-full text-sm">
+                    <Tag className="w-3 h-3" />
+                    <span>{featuredPost.category}</span>
+                  </span>
+                  <span className="text-sm text-gray-500">{featuredPost.date}</span>
                 </div>
-                <Link to={`/blog/${featuredPost.id}`} className="inline-flex items-center space-x-2 text-lavender-600 font-medium hover:text-lavender-700 transition-colors">
-                  <span>Read More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <h2 className="text-2xl md:text-3xl font-playfair font-bold text-gray-800 mb-4">{featuredPost.title}</h2>
+                <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#EC4899] flex items-center justify-center">
+                      <User className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-800">{featuredPost.author}</p>
+                      <p className="text-sm text-gray-500">{featuredPost.readTime}</p>
+                    </div>
+                  </div>
+                  <Link to={`/blog/${featuredPost.id}`} className="inline-flex items-center space-x-2 text-[#8B5CF6] font-medium hover:text-[#7C3AED] transition-colors">
+                    <span>Read More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-lavender-50">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-2xl font-playfair font-bold text-gray-800 mb-8">Latest Articles</h3>
+          <h3 className="text-2xl font-playfair font-bold text-white mb-8">Latest Articles</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {recentPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
+              <article key={post.id} className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow group">
                 <div className="aspect-video overflow-hidden">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 bg-blush-100 text-blush-700 rounded-full text-xs">{post.category}</span>
+                    <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 bg-[#FCE7F3] text-[#EC4899] rounded-full text-xs">{post.category}</span>
                     <span className="text-xs text-gray-500">{post.date}</span>
                   </div>
-                  <h3 className="text-lg font-playfair font-semibold text-gray-800 mb-2 group-hover:text-lavender-600 transition-colors">{post.title}</h3>
+                  <h3 className="text-lg font-playfair font-semibold text-gray-800 mb-2 group-hover:text-[#8B5CF6] transition-colors">{post.title}</h3>
                   <p className="text-gray-600 text-sm mb-4">{post.excerpt}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-sm text-gray-500">
                       <Clock className="w-4 h-4" />
                       <span>{post.readTime}</span>
                     </div>
-                    <Link to={`/blog/${post.id}`} className="text-lavender-600 font-medium text-sm hover:text-lavender-700 transition-colors">
+                    <Link to={`/blog/${post.id}`} className="text-[#8B5CF6] font-medium text-sm hover:text-[#7C3AED] transition-colors">
                       Read
                     </Link>
                   </div>

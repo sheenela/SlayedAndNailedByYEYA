@@ -15,11 +15,11 @@ const services = [
 function Services() {
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-blush-50 to-white">
+      <section className="relative py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-1.5 bg-blush-100 text-blush-700 rounded-full text-sm font-medium mb-4">Our Services</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-800 mb-6">Premium Nail Services</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Discover our range of luxury nail treatments designed to pamper, perfect, and polish.</p>
+          <span className="inline-block px-4 py-1.5 bg-white/90 backdrop-blur-sm text-[#8B5CF6] rounded-full text-sm font-medium mb-4">Our Services</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">Premium Nail Services</h1>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">Discover our range of luxury nail treatments designed to pamper, perfect, and polish.</p>
         </div>
       </section>
 
@@ -27,37 +27,39 @@ function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16 md:space-y-24">
             {services.map((service, index) => (
-              <div key={service.id} id={service.id} className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="relative rounded-2xl overflow-hidden shadow-xl group">
-                    <img src={service.image} alt={service.name} className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-full px-4 py-2 flex items-center space-x-2">
-                      <Clock className="w-4 h-4 text-lavender-600" />
-                      <span className="text-sm font-medium text-gray-800">{service.duration}</span>
+              <div key={service.id} id={service.id} className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-10 shadow-lg">
+                <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                  <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                    <div className="relative rounded-2xl overflow-hidden shadow-xl group">
+                      <img src={service.image} alt={service.name} className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center space-x-2">
+                        <Clock className="w-4 h-4 text-[#8B5CF6]" />
+                        <span className="text-sm font-medium text-gray-800">{service.duration}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                  <span className="inline-block px-3 py-1 bg-lavender-100 text-lavender-700 rounded-full text-sm font-medium mb-4">Starting at {service.startsAt}</span>
-                  <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800 mb-4">{service.name}</h2>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                  <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                    <span className="inline-block px-3 py-1 bg-[#F3E8FF] text-[#8B5CF6] rounded-full text-sm font-medium mb-4">Starting at {service.startsAt}</span>
+                    <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800 mb-4">{service.name}</h2>
+                    <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
 
-                  <div className="grid grid-cols-2 gap-3 mb-8">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-lavender-400 to-blush-400 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-3 h-3 text-white" />
+                    <div className="grid grid-cols-2 gap-3 mb-8">
+                      {service.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-2">
+                          <div className="w-5 h-5 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#EC4899] flex items-center justify-center flex-shrink-0">
+                            <Check className="w-3 h-3 text-white" />
+                          </div>
+                          <span className="text-sm text-gray-700">{feature}</span>
                         </div>
-                        <span className="text-sm text-gray-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
 
-                  <Link to="/booking" className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-lavender-500 to-blush-500 text-white rounded-full font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200">
-                    <span>Book This Service</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                    <Link to="/booking" className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white rounded-full font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200">
+                      <span>Book This Service</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
@@ -65,13 +67,15 @@ function Services() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-gradient-to-r from-lavender-500 to-blush-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-6">Ready to Get Slayed?</h2>
-          <p className="text-lg text-white/90 mb-8">Book your appointment today.</p>
-          <Link to="/booking" className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-lavender-600 rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-            <span>Book Now</span>
-          </Link>
+      <section className="py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-lg text-center">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-gray-800 mb-6">Ready to Get Slayed?</h2>
+            <p className="text-lg text-gray-600 mb-8">Book your appointment today.</p>
+            <Link to="/booking" className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white rounded-full font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+              <span>Book Now</span>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

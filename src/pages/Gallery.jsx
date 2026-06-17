@@ -53,15 +53,15 @@ function Gallery() {
 
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-lavender-50 to-white">
+      <section className="relative py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-1.5 bg-lavender-100 text-lavender-700 rounded-full text-sm font-medium mb-4">Our Portfolio</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-800 mb-6">Nail Gallery</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Browse our collection of stunning nail designs.</p>
+          <span className="inline-block px-4 py-1.5 bg-white/90 backdrop-blur-sm text-[#8B5CF6] rounded-full text-sm font-medium mb-4">Our Portfolio</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">Nail Gallery</h1>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">Browse our collection of stunning nail designs.</p>
         </div>
       </section>
 
-      <section className="py-8 bg-white sticky top-16 md:top-20 z-30 border-b border-gray-100">
+      <section className="py-8 bg-white/90 backdrop-blur-sm sticky top-16 md:top-20 z-30 border-b border-gray-200/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {categories.map((category) => (
@@ -69,7 +69,7 @@ function Gallery() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-4 md:px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  activeCategory === category.id ? 'bg-gradient-to-r from-lavender-500 to-blush-500 text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-lavender-50 hover:text-lavender-700'
+                  activeCategory === category.id ? 'bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-[#F3E8FF] hover:text-[#8B5CF6]'
                 }`}
               >
                 {category.label}
@@ -81,16 +81,18 @@ function Gallery() {
 
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-            {filteredImages.map((image, index) => (
-              <button
-                key={index}
-                onClick={() => openLightbox(index)}
-                className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl group cursor-pointer focus:outline-none focus:ring-2 focus:ring-lavender-500"
-              >
-                <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
-              </button>
-            ))}
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-lg">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+              {filteredImages.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => openLightbox(index)}
+                  className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#8B5CF6]"
+                >
+                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>

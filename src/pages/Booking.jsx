@@ -63,23 +63,20 @@ function Booking() {
 
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-blush-50 to-white overflow-hidden">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-lavender-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blush-200/30 rounded-full blur-3xl"></div>
-
+      <section className="relative py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <span className="inline-flex items-center space-x-2 px-4 py-1.5 bg-white/80 backdrop-blur text-blush-700 rounded-full text-sm font-medium mb-4">
+          <span className="inline-flex items-center space-x-2 px-4 py-1.5 bg-white/90 backdrop-blur-sm text-[#8B5CF6] rounded-full text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4" />
             <span>Book Your Appointment</span>
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-800 mb-6">Schedule Your Visit</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Ready to get beautiful nails? Fill out the form below and we'll confirm within 24 hours.</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">Schedule Your Visit</h1>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">Ready to get beautiful nails? Fill out the form below and we'll confirm within 24 hours.</p>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-6 md:p-8 lg:p-10 shadow-xl border border-gray-100">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 lg:p-10 shadow-xl border border-white/20">
             {isSubmitted ? (
               <div className="text-center py-12">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-green-400 to-green-500 flex items-center justify-center">
@@ -87,7 +84,7 @@ function Booking() {
                 </div>
                 <h2 className="text-3xl font-playfair font-bold text-gray-800 mb-4">Booking Request Received!</h2>
                 <p className="text-gray-600 mb-6 max-w-md mx-auto">Thank you for your booking request! We'll contact you within 24 hours to confirm.</p>
-                <div className="inline-flex items-center space-x-2 px-6 py-3 bg-lavender-50 text-lavender-700 rounded-full text-sm">
+                <div className="inline-flex items-center space-x-2 px-6 py-3 bg-[#F3E8FF] text-[#8B5CF6] rounded-full text-sm">
                   <Mail className="w-4 h-4" />
                   <span>Check your email for confirmation</span>
                 </div>
@@ -103,28 +100,28 @@ function Booking() {
 
                 <div className="mb-10">
                   <h3 className="text-xl font-playfair font-bold text-gray-800 mb-6 flex items-center space-x-2">
-                    <User className="w-5 h-5 text-lavender-500" />
+                    <User className="w-5 h-5 text-[#8B5CF6]" />
                     <span>Your Information</span>
                   </h3>
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                      <input type="text" id="name" name="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-lavender-400 focus:ring-2 focus:ring-lavender-100 transition-all outline-none" placeholder="Jane Doe" />
+                      <input type="text" id="name" name="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#8B5CF6] focus:ring-2 focus:ring-[#8B5CF6]/20 transition-all outline-none bg-white" placeholder="Jane Doe" />
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
-                      <input type="tel" id="phone" name="phone" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-lavender-400 focus:ring-2 focus:ring-lavender-100 transition-all outline-none" placeholder="+1 (758) 000-0000" />
+                      <input type="tel" id="phone" name="phone" required value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#8B5CF6] focus:ring-2 focus:ring-[#8B5CF6]/20 transition-all outline-none bg-white" placeholder="+1 (758) 000-0000" />
                     </div>
                     <div className="md:col-span-2">
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                      <input type="email" id="email" name="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-lavender-400 focus:ring-2 focus:ring-lavender-100 transition-all outline-none" placeholder="jane@example.com" />
+                      <input type="email" id="email" name="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#8B5CF6] focus:ring-2 focus:ring-[#8B5CF6]/20 transition-all outline-none bg-white" placeholder="jane@example.com" />
                     </div>
                   </div>
                 </div>
 
                 <div className="mb-10">
                   <h3 className="text-xl font-playfair font-bold text-gray-800 mb-6 flex items-center space-x-2">
-                    <Sparkles className="w-5 h-5 text-blush-500" />
+                    <Sparkles className="w-5 h-5 text-[#EC4899]" />
                     <span>Services Needed</span>
                   </h3>
                   <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -132,7 +129,7 @@ function Booking() {
                       <label
                         key={service.id}
                         className={`flex items-center p-4 rounded-xl cursor-pointer transition-all ${
-                          formData.service.includes(service.id) ? 'bg-gradient-to-br from-lavender-100 to-blush-100 border-2 border-lavender-400' : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
+                          formData.service.includes(service.id) ? 'bg-gradient-to-br from-[#F3E8FF] to-[#FCE7F3] border-2 border-[#8B5CF6]' : 'bg-gray-50 border-2 border-transparent hover:bg-gray-100'
                         }`}
                       >
                         <input type="checkbox" name="service-checkbox" value={service.id} checked={formData.service.includes(service.id)} onChange={() => handleCheckboxChange(service.id)} className="sr-only" />
@@ -144,17 +141,17 @@ function Booking() {
 
                 <div className="mb-10">
                   <h3 className="text-xl font-playfair font-bold text-gray-800 mb-6 flex items-center space-x-2">
-                    <Calendar className="w-5 h-5 text-gold-500" />
+                    <Calendar className="w-5 h-5 text-[#92400E]" />
                     <span>Date & Time</span>
                   </h3>
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">Preferred Date *</label>
-                      <input type="date" id="date" name="date" required value={formData.date} onChange={(e) => setFormData({ ...formData, date: e.target.value })} min={new Date().toISOString().split('T')[0]} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-lavender-400 focus:ring-2 focus:ring-lavender-100 transition-all outline-none" />
+                      <input type="date" id="date" name="date" required value={formData.date} onChange={(e) => setFormData({ ...formData, date: e.target.value })} min={new Date().toISOString().split('T')[0]} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#8B5CF6] focus:ring-2 focus:ring-[#8B5CF6]/20 transition-all outline-none bg-white" />
                     </div>
                     <div>
                       <label htmlFor="time" className="block text-sm font-medium text-gray-700 mb-2">Preferred Time *</label>
-                      <select id="time" name="time" required value={formData.time} onChange={(e) => setFormData({ ...formData, time: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-lavender-400 focus:ring-2 focus:ring-lavender-100 transition-all outline-none bg-white">
+                      <select id="time" name="time" required value={formData.time} onChange={(e) => setFormData({ ...formData, time: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#8B5CF6] focus:ring-2 focus:ring-[#8B5CF6]/20 transition-all outline-none bg-white">
                         <option value="">Select a time</option>
                         {timeSlots.map((slot) => (
                           <option key={slot} value={slot}>{slot}</option>
@@ -166,13 +163,13 @@ function Booking() {
 
                 <div className="mb-8">
                   <h3 className="text-xl font-playfair font-bold text-gray-800 mb-6 flex items-center space-x-2">
-                    <MessageSquare className="w-5 h-5 text-lavender-500" />
+                    <MessageSquare className="w-5 h-5 text-[#8B5CF6]" />
                     <span>Additional Notes</span>
                   </h3>
-                  <textarea id="notes" name="notes" rows={4} value={formData.notes} onChange={(e) => setFormData({ ...formData, notes: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-lavender-400 focus:ring-2 focus:ring-lavender-100 transition-all outline-none resize-none" placeholder="Any special requests, nail design ideas, or allergies?"></textarea>
+                  <textarea id="notes" name="notes" rows={4} value={formData.notes} onChange={(e) => setFormData({ ...formData, notes: e.target.value })} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#8B5CF6] focus:ring-2 focus:ring-[#8B5CF6]/20 transition-all outline-none resize-none bg-white" placeholder="Any special requests, nail design ideas, or allergies?"></textarea>
                 </div>
 
-                <button type="submit" disabled={isSubmitting || formData.service.length === 0} className="w-full py-4 bg-gradient-to-r from-lavender-500 to-blush-500 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center space-x-2">
+                <button type="submit" disabled={isSubmitting || formData.service.length === 0} className="w-full py-4 bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center space-x-2">
                   <Calendar className="w-5 h-5" />
                   <span>{isSubmitting ? 'Submitting...' : 'Request Appointment'}</span>
                 </button>
@@ -184,18 +181,20 @@ function Booking() {
         </div>
       </section>
 
-      <section className="py-12 bg-lavender-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-xl font-playfair font-semibold text-gray-800 mb-4">Need Immediate Assistance?</h3>
-          <p className="text-gray-600 mb-6">Prefer to book by phone? Give us a call or send us a WhatsApp.</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="tel:+17587270420" className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-lavender-600 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-200">
-              <Phone className="w-5 h-5" />
-              <span>Call Us</span>
-            </a>
-            <a href="https://wa.me/17587270420" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 px-6 py-3 bg-green-500 text-white rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-200">
-              <span>WhatsApp Us</span>
-            </a>
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg text-center">
+            <h3 className="text-xl font-playfair font-semibold text-gray-800 mb-4">Need Immediate Assistance?</h3>
+            <p className="text-gray-600 mb-6">Prefer to book by phone? Give us a call or send us a WhatsApp.</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="tel:+17587270420" className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-[#8B5CF6] rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-200">
+                <Phone className="w-5 h-5" />
+                <span>Call Us</span>
+              </a>
+              <a href="https://wa.me/17587270420" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 px-6 py-3 bg-green-500 text-white rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-200">
+                <span>WhatsApp Us</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

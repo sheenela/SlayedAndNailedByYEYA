@@ -22,13 +22,13 @@ function Reviews() {
 
   return (
     <div className="pt-16 md:pt-20">
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-lavender-50 to-white">
+      <section className="relative py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-1.5 bg-lavender-100 text-lavender-700 rounded-full text-sm font-medium mb-4">Client Love</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-800 mb-6">Reviews & Testimonials</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">Don't just take our word for it. See what our lovely clients have to say.</p>
+          <span className="inline-block px-4 py-1.5 bg-white/90 backdrop-blur-sm text-[#8B5CF6] rounded-full text-sm font-medium mb-4">Client Love</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">Reviews & Testimonials</h1>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">Don't just take our word for it. See what our lovely clients have to say.</p>
 
-          <div className="inline-flex items-center space-x-4 bg-white rounded-full px-6 py-3 shadow-md">
+          <div className="inline-flex items-center space-x-4 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-md">
             <div className="flex items-center space-x-1">
               {[1, 2, 3, 4, 5].map((star) => (
                 <Star key={star} className="w-6 h-6 fill-gold-400 text-gold-400" />
@@ -40,25 +40,27 @@ function Reviews() {
         </div>
       </section>
 
-      <section className="py-12 bg-white">
+      <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-6 md:gap-8">
-            {reviewStats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="text-3xl md:text-4xl font-playfair font-bold gradient-text mb-2">{stat.value}</p>
-                <p className="text-sm md:text-base text-gray-600">{stat.label}</p>
-              </div>
-            ))}
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg">
+            <div className="grid grid-cols-3 gap-6 md:gap-8">
+              {reviewStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <p className="text-3xl md:text-4xl font-playfair font-bold text-[#8B5CF6] mb-2">{stat.value}</p>
+                  <p className="text-sm md:text-base text-gray-600">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-lavender-50">
+      <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {reviews.map((review, index) => (
-              <div key={index} className="relative bg-white rounded-2xl p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow">
-                <Quote className="absolute top-6 right-6 w-8 h-8 text-lavender-100" />
+              <div key={index} className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-md hover:shadow-lg transition-shadow">
+                <Quote className="absolute top-6 right-6 w-8 h-8 text-[#8B5CF6]/20" />
                 <div className="flex items-center space-x-1 mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className={`w-5 h-5 ${star <= review.rating ? 'fill-gold-400 text-gold-400' : 'fill-gray-200 text-gray-200'}`} />
@@ -67,7 +69,7 @@ function Reviews() {
                 <p className="text-gray-700 mb-6 leading-relaxed">{review.text}</p>
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-lavender-400 to-blush-400 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#EC4899] flex items-center justify-center">
                       <span className="text-white font-semibold text-sm">{review.name.charAt(0)}</span>
                     </div>
                     <div>
