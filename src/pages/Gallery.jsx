@@ -2,27 +2,26 @@ import { useState } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const galleryImages = [
-  { src: 'https://images.pexels.com/photos/3997373/pexels-photo-3997373.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Elegant acrylic nails', category: 'acrylics' },
-  { src: 'https://images.pexels.com/photos/2849742/pexels-photo-2849742.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Gel polish', category: 'gel' },
-  { src: 'https://images.pexels.com/photos/4957787/pexels-photo-4957787.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Pedicure', category: 'pedicure' },
-  { src: 'https://images.pexels.com/photos/3997371/pexels-photo-3997371.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Manicure', category: 'manicure' },
-  { src: 'https://images.pexels.com/photos/4957805/pexels-photo-4957805.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Nail art', category: 'nail-art' },
-  { src: 'https://images.pexels.com/photos/2849742/pexels-photo-2849742.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'French tips', category: 'gel' },
-  { src: 'https://images.pexels.com/photos/3997373/pexels-photo-3997373.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Stiletto nails', category: 'acrylics' },
-  { src: 'https://images.pexels.com/photos/4957805/pexels-photo-4957805.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Colorful design', category: 'nail-art' },
-  { src: 'https://images.pexels.com/photos/3997371/pexels-photo-3997371.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Spa manicure', category: 'manicure' },
-  { src: 'https://images.pexels.com/photos/4957787/pexels-photo-4957787.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Pedicure spa', category: 'pedicure' },
-  { src: 'https://images.pexels.com/photos/2849742/pexels-photo-2849742.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Ombre nails', category: 'gel' },
-  { src: 'https://images.pexels.com/photos/3997373/pexels-photo-3997373.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Long nails', category: 'acrylics' },
+  { src: 'https://images.pexels.com/photos/20051316/pexels-photo-20051316.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Bacon cheeseburger with fries', category: 'fast-food' },
+  { src: 'https://images.pexels.com/photos/5041495/pexels-photo-5041495.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Caribbean seafood platter', category: 'local' },
+  { src: 'https://images.pexels.com/photos/24868933/pexels-photo-24868933.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Tropical cocktails', category: 'drinks' },
+  { src: 'https://images.pexels.com/photos/106343/pexels-photo-106343.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Grilled chicken wings', category: 'fast-food' },
+  { src: 'https://images.pexels.com/photos/39143744/pexels-photo-39143744.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Fried plantain chips', category: 'snackets' },
+  { src: 'https://images.pexels.com/photos/31596394/pexels-photo-31596394.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Margherita pizza', category: 'fast-food' },
+  { src: 'https://images.pexels.com/photos/29481861/pexels-photo-29481861.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Double cheeseburger', category: 'fast-food' },
+  { src: 'https://images.pexels.com/photos/5863518/pexels-photo-5863518.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Tiki cocktails at the bar', category: 'drinks' },
+  { src: 'https://images.pexels.com/photos/29852479/pexels-photo-29852479.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Grilled fish with fries', category: 'local' },
+  { src: 'https://images.pexels.com/photos/8862763/pexels-photo-8862763.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Crispy chicken wings', category: 'snackets' },
+  { src: 'https://images.pexels.com/photos/28180062/pexels-photo-28180062.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Rum with lime and ice', category: 'drinks' },
+  { src: 'https://images.pexels.com/photos/12362305/pexels-photo-12362305.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Fried plantains', category: 'local' },
 ]
 
 const categories = [
   { id: 'all', label: 'All' },
-  { id: 'manicure', label: 'Manicures' },
-  { id: 'pedicure', label: 'Pedicures' },
-  { id: 'acrylics', label: 'Acrylics' },
-  { id: 'gel', label: 'Gel' },
-  { id: 'nail-art', label: 'Nail Art' },
+  { id: 'fast-food', label: 'Fast Food' },
+  { id: 'local', label: 'Local Dishes' },
+  { id: 'drinks', label: 'Drinks & Bar' },
+  { id: 'snackets', label: 'Snackets' },
 ]
 
 function Gallery() {
@@ -55,13 +54,13 @@ function Gallery() {
     <div className="pt-16 md:pt-20">
       <section className="relative py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block px-4 py-1.5 bg-white/90 backdrop-blur-sm text-[#8B5CF6] rounded-full text-sm font-medium mb-4">Our Portfolio</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">Nail Gallery</h1>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">Browse our collection of stunning nail designs.</p>
+          <span className="inline-block px-4 py-1.5 bg-[#f59e0b]/20 text-[#fbbf24] rounded-full text-sm font-medium mb-4 border border-[#f59e0b]/30">Food Gallery</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-white mb-6">Straight From the Kitchen</h1>
+          <p className="text-lg text-white/70 max-w-2xl mx-auto">Browse our food, drinks, and snackets.</p>
         </div>
       </section>
 
-      <section className="py-8 bg-white/90 backdrop-blur-sm sticky top-16 md:top-20 z-30 border-b border-gray-200/50">
+      <section className="py-8 bg-[#2a1f17] backdrop-blur-sm sticky top-16 md:top-20 z-30 border-y border-[#f59e0b]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {categories.map((category) => (
@@ -69,7 +68,7 @@ function Gallery() {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-4 md:px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  activeCategory === category.id ? 'bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] text-white shadow-md' : 'bg-gray-100 text-gray-700 hover:bg-[#F3E8FF] hover:text-[#8B5CF6]'
+                  activeCategory === category.id ? 'bg-gradient-to-r from-[#f59e0b] to-[#b45309] text-white shadow-md' : 'bg-[#1a1410] text-gray-300 hover:bg-[#f59e0b]/10 hover:text-[#fbbf24] border border-[#f59e0b]/10'
                 }`}
               >
                 {category.label}
@@ -81,13 +80,13 @@ function Gallery() {
 
       <section className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-lg">
+          <div className="bg-[#2a1f17] rounded-2xl p-4 md:p-6 shadow-lg border border-[#f59e0b]/10">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
               {filteredImages.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => openLightbox(index)}
-                  className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#8B5CF6]"
+                  className="relative aspect-square overflow-hidden rounded-xl md:rounded-2xl group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#f59e0b]"
                 >
                   <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
                 </button>

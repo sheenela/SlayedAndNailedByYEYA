@@ -2,7 +2,7 @@ const phoneNumber = '17587270420'
 
 function WhatsAppButton() {
   const handleClick = () => {
-    const message = encodeURIComponent('Hi! I would like to book an appointment at Slayed and Nailed by YeYa.')
+    const message = encodeURIComponent('Hi! I would like to make a reservation or place an order at The Tarmac Lounge.')
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank')
   }
 
